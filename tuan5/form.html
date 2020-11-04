@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c8c7e10626.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            background-image: url("./image/anh.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container_form {
+            width: 450px;
+            height: 650px;
+            background-color: #ffffff;  
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px, rgba(0, 0, 0, 0.2) 0px 0px 10px;
+        }
+
+    </style>
+  </head>
+  <body>
+      <div class="container_form ">
+            <div class="title m-2">
+                <h3>Đăng kí</h3>
+                <p>Nhanh chóng và dễ dàng</p>
+            </div>
+           
+            <form action="#" method="POST" >
+                
+                <div class="form-group m-3">
+                    <!-- Thông báo khi chưa điền hết -->
+                    <div class="alert p-0" id ="alert_id">
+                        <img src="./image/error.png" alt="">
+                        <span id="error">Chưa điền hết</span>
+                    </div>
+                    
+                    <div class="d-flex">
+                        
+                        <div class=" mr-1">
+                            <input type="text" name="" id="surname" class="form-control mr-1" placeholder="Họ" >
+                        </div>
+
+                        <div class="mr-1">
+                            <input type="text" name="" id="name" class="form-control ml-1" placeholder="Tên" >
+                        </div>
+                    
+                    </div>
+                    <div class="mt-2 ">
+                        <!-- Thông báo khi sai dạng số điện thoại và mail -->
+                        <div class="mb-2 " id="check_phone"></div>
+                        <div class="mb-2" id="check_mail"></div>
+                        <div class="d-flex phone_email">
+                            <input type="text" name="" id="phone" class="form-control mr-1" placeholder="Số điện thoại" >
+                            <input type="text" name="" id="email" class="form-control ml-1" placeholder="Email" >
+                        </div>
+                        <input type="text" name="" id="user" class="form-control mt-2" placeholder="Tên đăng nhập" >
+                        <input type="password" name="" id="pass" class="form-control mt-2" placeholder="Mật khẩu" >
+                    </div>
+                    <br>
+                    
+                    <div class="form-group">
+                        <label for="">
+                            Ngày sinh
+                        </label>
+                        <!-- Kiểm tra ngày tháng năm nhuận -->
+                        <div class="mb-2" id="checkDate">
+                            <img src="./image/error.png" alt="">
+                            <span id="error_date">Chọn sai ngày</span>
+                        </div>
+                        <div class="d-flex">
+                            <!-- NGày tháng -->
+                            <select class="form-control mr-1" name="date" id="date" onmouseover="validate()">
+                            
+                            </select>
+                            <select class="form-control ml-1 mr-1" name="month" id="month" onmouseover="validate()">
+                                
+                            </select>
+                            <select class="form-control ml-1" name="year" id="year" onmouseover="validate()">
+
+                            </select>
+                        </div>
+                    </div>
+                    <span>Giới tính</span>
+                    <!-- Giới tính -->
+                    <div class="form-check">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="male">Nam</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Nữ</label><br>
+                    </div>
+                    
+                </div>
+                <button type="button" class="btn btn-primary w-50 ml-5 " onclick="_click()">Submit</button>
+            </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
