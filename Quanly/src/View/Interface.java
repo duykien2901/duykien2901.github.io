@@ -27,11 +27,12 @@ import controller.ChuyenController;
 
 import javax.swing.border.LineBorder;
 import java.awt.Cursor;
+import java.awt.Toolkit;
 
 public class Interface extends JFrame {
 
 	private JPanel contentPane;
-	private JPanel panel_4;
+	public JPanel panel_4;
 	private static JPanel panel_5;
 	private JLabel lblNewLabel_2;
 	private JPanel panel_1;
@@ -73,19 +74,19 @@ public class Interface extends JFrame {
 	 * Create the frame.
 	 */
 	public Interface() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\LENOVO\\eclipse-workspace\\image\\iconfinder_Rounded-31_2024644 (1).png"));
 		setTitle("Quản lí chi thu");
-		
 //		ChuyenController controller = new ChuyenController(root)
-		
-		
+	
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1216, 815);
+		setBounds(350, 150, 1216, 815);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new MatteBorder(1, 0, 0, 0, (Color) new Color(0, 0, 0)));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.setBounds(22, 13, 1151, 742);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -115,7 +116,7 @@ public class Interface extends JFrame {
 		panel_3 = new JPanel();
 		panel_3.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		panel_3.setBackground(new Color(250, 205, 50));
-		panel_3.setBounds(12, 101, 301, 93);
+		panel_3.setBounds(24, 101, 301, 93);
 		panel_1.add(panel_3);
 		panel_3.setLayout(null);
 		
@@ -152,7 +153,7 @@ public class Interface extends JFrame {
 		panel_5.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		panel_5.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		panel_5.setBackground(new Color(50, 205, 50));
-		panel_5.setBounds(65, 226, 248, 93);
+		panel_5.setBounds(77, 226, 248, 93);
 		panel_1.add(panel_5);
 		panel_5.setLayout(new BorderLayout(0, 0));
 		
@@ -184,7 +185,7 @@ public class Interface extends JFrame {
 		panel_6.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		panel_6.setBackground(new Color(50, 205, 50));
 		panel_6.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		panel_6.setBounds(65, 370, 248, 93);
+		panel_6.setBounds(77, 371, 248, 93);
 		panel_1.add(panel_6);
 		panel_6.setLayout(new BorderLayout(0, 0));
 		
@@ -216,7 +217,7 @@ public class Interface extends JFrame {
 		panel_7.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		panel_7.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 		panel_7.setBackground(new Color(50, 205, 50));
-		panel_7.setBounds(65, 517, 248, 93);
+		panel_7.setBounds(77, 517, 248, 93);
 		panel_1.add(panel_7);
 		panel_7.setLayout(new BorderLayout(0, 0));
 		
@@ -255,6 +256,7 @@ public class Interface extends JFrame {
 		ChuyenController controller = new ChuyenController(panel_4);
 		controller.setView(panel_5, lblNewLabel_2);
 		JpanelMain jpanelMain= new JpanelMain();
+		jpanelMain.setLocation(0, 0);
 		panel_4.removeAll();
 		panel_4.add(jpanelMain);
 		panel_4.validate();

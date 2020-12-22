@@ -8,7 +8,18 @@ public class DanhSachKhoanThu {
 	private String batDau;
 	private String ketThuc;
 	private int soTien;
-	private String trangThai;
+	
+	public DanhSachKhoanThu() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public DanhSachKhoanThu(String tenKhoanThu, String batDau, String ketThuc, int soTien) {
+		setTenKhoanThu(tenKhoanThu);
+		setBatDau(batDau);
+		setKetThuc(ketThuc);
+		setSoTien(soTien);
+	}
+	
 	public int getIdKhoanThu() {
 		return idKhoanThu;
 	}
@@ -39,14 +50,7 @@ public class DanhSachKhoanThu {
 	public void setSoTien(int soTien) {
 		this.soTien = soTien;
 	}
-	public String getTrangThai() {
-		return trangThai;
-	}
-	public void setTrangThai(String trangThai) {
-		this.trangThai = trangThai;
-	}
+	
 
-	
-	
 	
 }

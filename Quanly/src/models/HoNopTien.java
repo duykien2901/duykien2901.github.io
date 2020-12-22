@@ -4,7 +4,7 @@ public class HoNopTien {
 	private int idHoKhau;
 	private String tenHoKhau;
 	private int soNhanKhau;
-	private String trangThai;
+	private int trangThai;
 	
 	public int getIdHoKhau() {
 		return idHoKhau;
@@ -18,19 +18,17 @@ public class HoNopTien {
 	public void setTenHoKhau(String tenHoKhau) {
 		this.tenHoKhau = tenHoKhau;
 	}
-	public void setTrangThai(String trangThai) {
-		this.trangThai = trangThai;
-	}
+	
 	public int getSoNhanKhau() {
 		return soNhanKhau;
 	}
 	public void setSoNhanKhau(int soNhanKhau) {
 		this.soNhanKhau = soNhanKhau;
 	}
-	public String getTrangThai() {
+	public int getTrangThai() {
 		return trangThai;
 	}
-	public void setTrangthai(String trangThai) {
+	public void setTrangThai(int trangThai) {
 		this.trangThai = trangThai;
 	}
 }

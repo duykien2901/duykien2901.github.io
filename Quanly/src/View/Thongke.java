@@ -11,6 +11,8 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Thongke extends JPanel {
 	private JTable table;
@@ -24,20 +26,24 @@ public class Thongke extends JPanel {
 		setLayout(null);
 		
 		JButton btnNewButton = new JButton("Chọn hộ");
-		btnNewButton.setBounds(81, 45, 113, 36);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(116, 45, 113, 36);
 		add(btnNewButton);
 		
 		JButton btnTngSH = new JButton("Tổng số hộ");
-		btnTngSH.setBounds(329, 45, 113, 36);
+		btnTngSH.setBounds(356, 45, 113, 36);
 		add(btnTngSH);
 		
 		JButton btnTngSTin = new JButton("Tổng số tiền");
-		btnTngSTin.setBounds(561, 45, 113, 36);
+		btnTngSTin.setBounds(603, 45, 113, 36);
 		add(btnTngSTin);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel.setBounds(81, 136, 593, 372);
+		panel.setBounds(116, 132, 593, 372);
 		add(panel);
 		panel.setLayout(null);
 		
@@ -56,6 +62,8 @@ public class Thongke extends JPanel {
 		panel_1.add(scrollPane, BorderLayout.CENTER);
 		
 		table = new JTable();
+		table.setColumnSelectionAllowed(true);
+		table.setCellSelectionEnabled(true);
 		scrollPane.setViewportView(table);
 		loadData();
 	}
